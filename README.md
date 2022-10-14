@@ -6,4 +6,4 @@ A simple web scraper that figures out what esports teams are playing at what tim
 2. `go mod tidy`
 3. `go run .`
 
-Their is 
+Built with ♥️ and [colly](https://github.com/gocolly/colly)
