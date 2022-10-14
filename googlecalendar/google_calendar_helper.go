@@ -97,15 +97,15 @@ func getCalendarService() *calendar.Service {
 func AddGoogleCalendarEvent(teamNames []string, time string, date string) {
 	log.Println("YOOO", teamNames[0], time)
 	calendarService := getCalendarService()
-	log.Println(date + "T" + time + ":00+05:30")
+	log.Println(date + "T" + time + ":00+00:00")
 	event := &calendar.Event{
 		Summary: teamNames[0] + " v/s " + teamNames[1],
 		Start: &calendar.EventDateTime{
-			DateTime: date + "T" + time + ":00+05:30",
+			DateTime: date + "T" + time + ":00+00:00",
 			TimeZone: "Asia/Kolkata",
 		},
 		End: &calendar.EventDateTime{
-			DateTime: date + "T" + util.AddOneHourToTime(time) + ":00+05:30",
+			DateTime: date + "T" + util.AddOneHourToTime(time) + ":00+00:00",
 			TimeZone: "Asia/Kolkata",
 		},
 	}
